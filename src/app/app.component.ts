@@ -10,7 +10,7 @@ export class AppComponent {
     title = 'HR IPMS Contacts';
 
     menu: Array<Object> = [
-        { name: 'Helps', url: '/' },
+        { name: 'Help', url: '/' },
         { name: 'Github', url: 'https://github.com/workcontrolgit/angular-material-crud-forms' },
         { name: 'About', url: '/' }
     ];
