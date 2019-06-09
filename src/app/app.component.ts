@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-    title = 'Angular Material CRUD Forms';
+    title = 'HR IPMS Contacts';
 
     menu: Array<Object> = [
-        { name: 'Tutorials', url: 'https://www.cc28tech.com/angular-material-crud-forms-part-1' },
-        { name: 'Github', url: 'https://github.com/cwun/angular-material-crud-forms' },
-        { name: 'About me', url: 'https://www.cc28tech.com/cathy-wun' }
+        { name: 'Helps', url: '/' },
+        { name: 'Github', url: 'https://github.com/workcontrolgit/angular-material-crud-forms' },
+        { name: 'About', url: '/' }
     ];
 }

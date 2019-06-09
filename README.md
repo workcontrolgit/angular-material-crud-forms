@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Hosted in Azure.
 
-- [Angular Material CRUD Forms](https://angular-material-crud-forms.azurewebsites.net/)
+- [Angular Material CRUD Forms](https://angularmaterial.netlify.com/)
 
 ## Tutorials
 
