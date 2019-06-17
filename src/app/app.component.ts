@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-    title = 'HR IPMS Contacts';
+    title = 'Angular Material Master/Detail CRUD Demo';
 
     menu: Array<Object> = [
         { name: 'Help', url: '/' },
