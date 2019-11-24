@@ -14,13 +14,13 @@ import { ContactService } from '../shared/contact.service';
 })
 
 export class NewContactComponent implements OnInit {
-    title = 'Create Contact';
+    title = 'Create Position Description';
     personalForm: FormGroup;
     workForm: FormGroup;
     addressForm: FormGroup;
-    
+
     constructor(
-        private formBuilder: FormBuilder, 
+        private formBuilder: FormBuilder,
         private router: Router,
         private contactService: ContactService,
         private logger: Logger) { }
@@ -35,7 +35,7 @@ export class NewContactComponent implements OnInit {
         this.personalForm = this.formBuilder.group({
             'firstName': ['', Validators.required],
             'lastName': ['', Validators.required],
-            'email': ['', [Validators.required, Validators.email] ] 
+            'email': ['', [Validators.required, Validators.email] ]
         });
     }
 
@@ -44,23 +44,23 @@ export class NewContactComponent implements OnInit {
             'work': ['', Validators.required]
         });
     }
-      
+
     buildAddressForm(): void {
         this.addressForm = this.formBuilder.group({
             'street': ['', Validators.required],
             'city': ['', Validators.required],
-            'state': ['', Validators.required ], 
+            'state': ['', Validators.required ],
             'zip': ['', Validators.required],
         });
     }
 
     save() {
-        if (this.invalidForms()) 
+        if (this.invalidForms())
             return;
 
         const newContact = this.getContact();
         this.logger.log(`New Contact: ${newContact}`);
-        
+
         this.contactService.addContact(newContact).subscribe(result => {
             if (result) {
                 // go to Contace List page
@@ -82,7 +82,7 @@ export class NewContactComponent implements OnInit {
      * Return Contact instance by combining the following.
      *   personalForm.value => firstName, lastName, email
      *   workForm.value => work
-     *   addressForm.value => street, city, state, zip 
+     *   addressForm.value => street, city, state, zip
      */
     getContact(): Contact {
         return { ...this.personalForm.value, ...this.workForm.value, ...this.addressForm.value };
