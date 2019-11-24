@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-    title = 'HR IPMS Contacts';
+    title = 'Position Description';
 
     menu: Array<Object> = [
         { name: 'Help', url: '/' },
